@@ -1,6 +1,7 @@
 const { filterByQuery, findById, createNewAnimal, validateAnimal } = require('../../lib/animals');
 const { animals } = require('../../data/animals');
 const router = require('express').Router();
+router.use(require('./zookeeperRoutes'));
 
 router.get('/animals', (req, res) => {
   let results = animals;
